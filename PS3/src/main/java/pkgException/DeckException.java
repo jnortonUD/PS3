@@ -1,10 +1,11 @@
 package pkgException;
 
+
 import pkgCore.Deck;
 
 public class DeckException extends Exception {
 
-	private Deck d;
+	private Deck d = new Deck();
 
 	public DeckException(Deck d) {
 		super();

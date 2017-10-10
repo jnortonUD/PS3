@@ -56,23 +56,15 @@ public class Deck {
 		final int number = result.size();
 		return number;
 	}
-	//TODO: Write a method that will return the number of a given eRank left in the deck.
-//	public int CardCount(eRank eRank) {
-//		List<Card> result = cardsInDeck.stream()
-//				.filter(c -> eRank.equals(c.geteRank()))
-//				.collect(Collectors.toList());
-//		final int count = result.size();
-//		return count;
-//	}
-	ArrayList<Card> Suit = new ArrayList<Card>();
+//	TODO: Write a method that will return the number of a given eRank left in the deck.
 	public int CardCount(eRank eRank) {
-		for (Card c: this.cardsInDeck) {
-			if(c.geteRank() == eRank) {
-				Suit.add(c);
-			}
-		}
-		return Suit.size();
+		List<Card> result = cardsInDeck.stream()
+				.filter(c -> c.geteRank() == eRank)
+				.collect(Collectors.toList());
+		final int count = result.size();
+		return count;
 	}
+	
 	//TODO: Write a method that will return 0 or 1 if a given card is left in the deck.
 	public int FindCard(Card c) {
 		for (Card a: cardsInDeck) {

@@ -43,16 +43,16 @@ public class DeckTest {
 		//TODO: Build a deck, test the DeckRankCount method
 		Deck c = new Deck();
 		
-		assertEquals(c.CardCount(eRank.FIVE),4);
-		assertNotEquals(c.CardCount(eRank.ACE),3);
+		assertTrue(c.CardCount(eRank.FIVE) == 4);
+		assertFalse(c.CardCount(eRank.ACE) == 3);
 	}
 	
 	public void TestDeckSuitCount() {
 		//TODO: Build a deck, test the DeckSuitCount method
 		Deck d = new Deck();
 		
-		assertEquals(d.CardCount(eSuit.CLUBS),13);
-		assertNotEquals(d.CardCount(eSuit.SPADES),6);
+		assertTrue(d.CardCount(eSuit.CLUBS) == 13);
+		assertFalse(d.CardCount(eSuit.SPADES) == 6);
 	}
 
 }
